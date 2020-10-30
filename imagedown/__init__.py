@@ -15,7 +15,7 @@ class ImageDown:
     LIMIT = 5
     URLS = []
 
-    def __init__(self, keyword, limit = 5):
+    def __init__(self, keyword, limit = 5, domain = None):
         try:
             chromedriver_autoinstaller.install()
         except:
@@ -30,7 +30,10 @@ class ImageDown:
         chrome_options.add_argument("--disable-gpu")      
 
         self.DRIVER = webdriver.Chrome(options=chrome_options)
-        self.DRIVER.get(f'https://www.google.com/search?q={keyword}&tbm=isch')
+        if domain == None:
+            self.DRIVER.get(f'https://www.google.com/search?q={keyword}&tbm=isch')
+        else:
+            self.DRIVER.get(f'https://www.google.com.{domain}/search?q={keyword}&tbm=isch')
         self.URLS = []
 
     def get_urls(self, baslangic = 1):

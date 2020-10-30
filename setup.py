@@ -8,7 +8,7 @@ with open('README.md') as f:
 
 setup(
     name='ImageDown',
-    version='0.5.1',
+    version='0.5.2',
     description='[WIP] Google Images full-photo downloader',
     long_description=long_description,
     author='Yusuf Usta',
