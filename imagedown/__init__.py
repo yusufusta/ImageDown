@@ -53,7 +53,7 @@ class ImageDown:
         self.URLS = urls
         return urls
 
-    def download(self, folder = './imagedown/', gifs = False, paths_errors = False):
+    def download(self, folder = './imagedown/', gifs = False, paths_errors = False, timeout = 5):
         if not os.path.exists(folder):
             os.makedirs(folder)
         paths = []
@@ -63,7 +63,7 @@ class ImageDown:
             try:
                 Req = get(url, headers={
                     'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
-                })
+                }, timeout=timeout)
             except:
                 if paths_errors:
                     paths.append(False)
