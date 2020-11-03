@@ -9,10 +9,20 @@ pip install imagedown
 ```
 
 ## 🔷 Examples
+**Google: **
 ```python
 from ImageDown import ImageDown 
 
-ig = ImageDown('asena kurt', 10)
+ig = ImageDown().Google('istanbul', 10)
+ig.get_urls()
+ig.download()
+```
+
+**Yandex: **
+```python
+from ImageDown import ImageDown 
+
+ig = ImageDown().Yandex('istanbul', 10)
 ig.get_urls()
 ig.download()
 ```
@@ -21,6 +31,7 @@ ig.download()
 By time I do these, 1.0.0 will be ready.
 
 - [X] Downloader
+- [X] Yandex
 - [ ] More exception, More choice, stability.
 
 ## 💻 Contributors
