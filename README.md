@@ -9,7 +9,7 @@ pip install imagedown
 ```
 
 ## 🔷 Examples
-**Google: **
+**Google:**
 ```python
 from ImageDown import ImageDown 
 
@@ -18,7 +18,7 @@ ig.get_urls()
 ig.download()
 ```
 
-**Yandex: **
+**Yandex:**
 ```python
 from ImageDown import ImageDown 
 
